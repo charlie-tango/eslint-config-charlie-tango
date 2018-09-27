@@ -1,12 +1,13 @@
-module.exports {
+module.exports = {
+  root: true,
   parser: 'babel-eslint',
 
   extends: [
-    './rules/base',
-    './rules/prettier',
-    './rules/jest',
-    './rules/flow',
     './rules/react',
+    './rules/base',
+    './rules/flow',
+    './rules/jest',
+    './rules/prettier',
   ].map(require.resolve),
 
   env: {
