@@ -16,8 +16,6 @@
   "license": "ISC",
   "dependencies": {
     "babel-eslint": "9.x",
-    "eslint-config-airbnb": "17.x",
-    "eslint-config-airbnb-base": "13.x",
     "eslint-config-prettier": "3.x",
     "eslint-plugin-flowtype": "2.x",
     "eslint-plugin-import": "2.x",
