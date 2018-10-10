@@ -34,7 +34,15 @@ module.exports = {
     'react/react-in-jsx-scope': 'error',
     'react/require-render-return': 'error',
     'react/style-prop-object': 'warn',
-    'react/sort-comp': 'warn',
+    'react/sort-comp': ['warn', {
+      order: [
+        'static-methods',
+        'instance-variables',
+        'lifecycle',
+        'everything-else',
+        'render',
+      ]
+    }],
     'react/void-dom-elements-no-children': 'off', // Causes issues with funky structure,
     'react/no-did-update-set-state': 'warn',
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md
