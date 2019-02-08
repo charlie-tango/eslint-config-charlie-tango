@@ -21,14 +21,14 @@
     "eslint-plugin-import": "2.x",
     "eslint-plugin-jest": "21.x",
     "eslint-plugin-jsx-a11y": "6.x",
-    "eslint-plugin-react": "7.x"
+    "eslint-plugin-react": "7.x",
+    "eslint-plugin-react-hooks": "^1.0.1",
+    "react": "^16.8.1"
   },
   "devDependencies": {
-    "eslint": "5.x",
-    "react": "^16.5.2"
+    "eslint": "5.x"
   },
   "peerDependencies": {
-    "eslint": "5.x",
-    "react": "^16.5.2"
+    "eslint": "5.x"
   }
 }

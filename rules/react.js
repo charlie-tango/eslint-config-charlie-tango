@@ -1,12 +1,12 @@
 module.exports = {
-  plugins: ['react'],
+  plugins: ['react', 'react-hooks'],
 
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
   },
-  
+
   rules: {
     // https://github.com/yannickcr/eslint-plugin-react/tree/master/docs/rules
     'react/jsx-handler-names': ['warn', {
@@ -51,5 +51,8 @@ module.exports = {
       allowArrowFunctions: true,
       allowBind: false,
     }],
+
+    // Hooks
+    "react-hooks/rules-of-hooks": "error",
   },
 }
