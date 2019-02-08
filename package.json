@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ct",
-  "version": "1.1.1",
+  "version": "2.0.0",
   "description": "ESLint config used in Charlie Tango",
   "main": "index.js",
   "scripts": {
