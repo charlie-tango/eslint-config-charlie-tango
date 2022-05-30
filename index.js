@@ -1,35 +1,42 @@
-/**
- * Inspired by create-react-app:
- * https://github.com/facebookincubator/create-react-app/blob/master/packages/eslint-config-react-app
- */
+// const baseRules = require("./rules/base.js");
+// const importRules = require("./rules/import.js");
+// const jsxRules = require("./rules/jsx-a11y.js");
+// const reactRules = require("./rules/react.js");
+// const tsRules = require("./rules/typescript.js");
 
 module.exports = {
   root: true,
-  parser: 'babel-eslint',
-
-  extends: [
-    './rules/import',
-    './rules/flow',
-    './rules/prettier',
-    './rules/jest',
-    './rules/react',
-    './rules/jsx-a11y',
-    './rules/base',
-  ].map(require.resolve),
 
   env: {
     browser: true,
     commonjs: true,
     es6: true,
     node: true,
-    jest: true,
   },
-
   parserOptions: {
     ecmaVersion: 2018,
-    sourceType: 'module',
+    sourceType: "module",
     ecmaFeatures: {
-      generators: true,
+      jsx: true,
     },
   },
-}
+  settings: {
+    react: {
+      version: "detect",
+    },
+  },
+  parser: "@typescript-eslint/parser",
+  extends: [
+    require.resolve("./rules/base"),
+    require.resolve("./rules/react"),
+    require.resolve("./rules/typescript"),
+    "plugin:react-hooks/recommended",
+  ],
+  plugins: ["import", "jsx-a11y", "react", "@typescript-eslint"],
+  overrides: [
+    {
+      files: ["src/**/__tests__/**/*", "src/**/*.{spec,test}.*"],
+      extends: ["plugin:testing-library/react"],
+    },
+  ],
+};
