@@ -1,34 +1,33 @@
 {
-  "name": "eslint-config-ct",
-  "version": "2.0.0",
-  "description": "ESLint config used in Charlie Tango",
+  "name": "eslint-config-charlie-tango",
+  "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "test": "eslint ./__test__/."
-  },
-  "keywords": [
-    "ESLint",
-    "Charlie",
-    "Tango",
-    "config"
-  ],
   "author": "Charlie Tango",
-  "license": "ISC",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "test": "eslint . --ext js,ts,tsx"
+  },
   "dependencies": {
-    "babel-eslint": "9.x",
-    "eslint-config-prettier": "3.x",
-    "eslint-plugin-flowtype": "2.x",
-    "eslint-plugin-import": "2.x",
-    "eslint-plugin-jest": "21.x",
-    "eslint-plugin-jsx-a11y": "6.x",
-    "eslint-plugin-react": "7.x",
-    "eslint-plugin-react-hooks": "^1.0.1",
-    "react": "^16.8.1"
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/parser": "^5.26.0",
+    "confusing-browser-globals": "^1.0.11",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-react-hooks": "^4.5.0",
+    "eslint-plugin-testing-library": "^5.5.1"
   },
   "devDependencies": {
-    "eslint": "5.x"
+    "eslint": "^8.16.0",
+    "prettier": "^2.6.2",
+    "react": "^18.1.0",
+    "typescript": "^4.7.2"
   },
   "peerDependencies": {
-    "eslint": "5.x"
+    "eslint": "^8.0.0",
+    "typescript": "*"
   }
 }

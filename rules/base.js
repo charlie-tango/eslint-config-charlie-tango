@@ -1,23 +1,19 @@
+const restrictedGlobals = require('confusing-browser-globals');
+
 module.exports = {
   rules: {
-    // custom
-    'semi': ['warn', 'never'],
-    'no-console': ['warn', { allow: ["warn", "error"] }],
-
     // http://eslint.org/docs/rules/
     'array-callback-return': 'warn',
-    'default-case': ['warn', { commentPattern: '^no default$' }],
     'dot-location': ['warn', 'property'],
     eqeqeq: ['warn', 'smart'],
     'new-parens': 'warn',
-    'no-array-constructor': 'warn',
     'no-caller': 'warn',
     'no-cond-assign': ['warn', 'except-parens'],
     'no-const-assign': 'warn',
     'no-control-regex': 'warn',
+    'no-console': ['warn', { allow: ['warn', 'error'] }],
     'no-delete-var': 'warn',
     'no-dupe-args': 'warn',
-    'no-dupe-class-members': 'warn',
     'no-dupe-keys': 'warn',
     'no-duplicate-case': 'warn',
     'no-empty-character-class': 'warn',
@@ -58,7 +54,9 @@ module.exports = {
     'no-obj-calls': 'warn',
     'no-octal': 'warn',
     'no-octal-escape': 'warn',
-    'no-redeclare': 'warn',
+    // TODO: Remove this option in the next major release of CRA.
+    // https://eslint.org/docs/user-guide/migrating-to-6.0.0#-the-no-redeclare-rule-is-now-more-strict-by-default
+    'no-redeclare': ['warn', { builtinGlobals: false }],
     'no-regex-spaces': 'warn',
     'no-restricted-syntax': ['warn', 'WithStatement'],
     'no-script-url': 'warn',
@@ -70,7 +68,7 @@ module.exports = {
     'no-template-curly-in-string': 'warn',
     'no-this-before-super': 'warn',
     'no-throw-literal': 'warn',
-    'no-undef': 'error',
+    'no-restricted-globals': ['error'].concat(restrictedGlobals),
     'no-unexpected-multiline': 'warn',
     'no-unreachable': 'warn',
     'no-unused-expressions': [
@@ -82,17 +80,8 @@ module.exports = {
       },
     ],
     'no-unused-labels': 'warn',
-    'no-unused-vars': [
-      'warn',
-      {
-        vars: 'local',
-        args: 'none',
-        ignoreRestSiblings: true,
-      },
-    ],
     'no-useless-computed-key': 'warn',
     'no-useless-concat': 'warn',
-    'no-useless-constructor': 'warn',
     'no-useless-escape': 'warn',
     'no-useless-rename': [
       'warn',
@@ -116,15 +105,20 @@ module.exports = {
         object: 'require',
         property: 'ensure',
         message:
-          'Please use import() instead. More info: https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#code-splitting',
+          'Please use import() instead. More info: https://facebook.github.io/create-react-app/docs/code-splitting',
       },
       {
         object: 'System',
         property: 'import',
         message:
-          'Please use import() instead. More info: https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#code-splitting',
+          'Please use import() instead. More info: https://facebook.github.io/create-react-app/docs/code-splitting',
       },
     ],
     'getter-return': 'warn',
+
+    // https://github.com/benmosher/eslint-plugin-import/tree/master/docs/rules
+    'import/first': 'error',
+    'import/no-amd': 'error',
+    'import/no-webpack-loader-syntax': 'error',
   },
-}
+};
