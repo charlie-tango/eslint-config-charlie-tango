@@ -31,6 +31,7 @@ module.exports = {
     require.resolve("./rules/react"),
     require.resolve("./rules/typescript"),
     "plugin:react-hooks/recommended",
+    "plugin:storybook/recommended"
   ],
   plugins: ["import", "jsx-a11y", "react", "@typescript-eslint"],
   overrides: [
