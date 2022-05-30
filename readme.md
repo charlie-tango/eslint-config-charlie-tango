@@ -11,3 +11,12 @@ Create a new `.eslintrc` file, and extend the `@charlietango/eslint-config` insi
 }
 ```
 
+## Rules
+
+Provides configuration for the following:
+
+* JavaScript
+* TypeScript
+* React
+* React Testing Library
+* Storybook
