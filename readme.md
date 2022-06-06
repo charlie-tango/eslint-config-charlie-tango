@@ -1,4 +1,4 @@
-# @charlietango/eslint-config
+# eslint-config-charlie-tango
 
 Provide a baseline of ESlint rules for projects written with TypeScript and React.
 
