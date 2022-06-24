@@ -5,7 +5,7 @@
   "author": "Charlie Tango",
   "license": "MIT",
   "engines": {
-    "node": ">=16"
+    "node": ">=14"
   },
   "scripts": {
     "test": "eslint . --ext js,ts,tsx",
