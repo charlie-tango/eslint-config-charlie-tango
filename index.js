@@ -29,8 +29,9 @@ module.exports = {
     require.resolve("./rules/typescript"),
     "plugin:react-hooks/recommended",
     "plugin:storybook/recommended",
+    "plugin:tailwindcss/recommended",
   ],
-  plugins: ["import", "jsx-a11y", "react", "@typescript-eslint"],
+  plugins: ["import", "jsx-a11y", "react", "@typescript-eslint", "tailwindcss"],
   overrides: [
     {
       files: ["src/**/__tests__/**/*", "src/**/*.{spec,test}.*"],
@@ -38,8 +39,12 @@ module.exports = {
       rules: {
         // Disable https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-node-access.md
         // It is a good rule, but currently there's not really a viable alternative if you need to look at the DOM (with something like `.closest())
-        "testing-library/no-node-access": 'off',
+        "testing-library/no-node-access": "off",
       },
     },
   ],
+  rules: {
+    // https://github.com/francoismassart/eslint-plugin-tailwindcss
+    'tailwindcss/classnames-order': 'off', // We use prettier to sort classes
+  },
 };
