@@ -50,5 +50,12 @@ module.exports = {
     "jsx-a11y/role-has-required-aria-props": "warn",
     "jsx-a11y/role-supports-aria-props": "warn",
     "jsx-a11y/scope": "warn",
+    // Enforce double quotes for JSX attributes
+    "jsx-quotes": ["warn", "prefer-double"],
+    // Only allow curly braces for prop values when they are needed - E.g. `<div className={'p-4'} />` should be `<div className="p-4" />`
+    "react/jsx-curly-brace-presence": [
+      "warn",
+      { props: "never", children: "never", propElementValues: "always" },
+    ],
   },
 };
