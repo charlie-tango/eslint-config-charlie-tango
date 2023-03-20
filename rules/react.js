@@ -53,9 +53,9 @@ module.exports = {
     // Enforce double quotes for JSX attributes
     "jsx-quotes": ["warn", "prefer-double"],
     // Only allow curly braces for prop values when they are needed - E.g. `<div className={'p-4'} />` should be `<div className="p-4" />`
-    "react/jsx-curly-brace-presence": [
-      "warn",
-      { props: "never", children: "never", propElementValues: "always" },
-    ],
+     // "react/jsx-curly-brace-presence": [
+    //   "warn",
+    //   { props: "never", children: "never", propElementValues: "always" },
+    // ],
   },
 };
