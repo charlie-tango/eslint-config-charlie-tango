@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-charlie-tango",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "main": "index.js",
   "author": "Charlie Tango",
   "license": "MIT",
