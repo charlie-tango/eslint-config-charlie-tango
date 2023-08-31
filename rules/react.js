@@ -2,6 +2,7 @@ module.exports = {
   rules: {
     // https://github.com/yannickcr/eslint-plugin-react/tree/master/docs/rules
     "react/forbid-foreign-prop-types": ["warn", { allowInPropTypes: true }],
+    "react/jsx-key": "warn",
     "react/jsx-no-comment-textnodes": "warn",
     "react/jsx-no-duplicate-props": "warn",
     "react/jsx-no-target-blank": "warn",
