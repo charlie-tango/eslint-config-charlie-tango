@@ -14,6 +14,11 @@ export default [...ctConfig];
 
 You can modify the rules as needed, or add additional rules to the configuration.
 
+## Language
+
+The configuration is written in TypeScript, and is intended to be used with TypeScript and React projects.
+It also includes globals for both `node` and `browser` environments.
+
 ## Rules
 
 Provides configuration for the following:

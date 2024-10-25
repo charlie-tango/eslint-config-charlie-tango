@@ -1,6 +1,6 @@
 {
   "name": "@charlietango/eslint-config",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "index.js",
   "module": "index.js",
   "author": "Charlie Tango",
@@ -31,6 +31,7 @@
     "eslint-plugin-jsx-a11y": "^6.10.1",
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^5.0.0",
+    "globals": "^15.11.0",
     "typescript-eslint": "^8.11.0"
   },
   "devDependencies": {
