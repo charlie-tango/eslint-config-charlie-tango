@@ -1,10 +1,12 @@
-import React from 'react';
+import React from "react";
 
 function TestJsx() {
   return (
     <div>
-      <label>Hello</label>
-      <input type="text" value="world" />
+      <label>
+        Hello
+        <input type="text" value="world" />
+      </label>
     </div>
   );
 }

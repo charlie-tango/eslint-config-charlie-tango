@@ -16,7 +16,7 @@ export default [
     },
   },
   {
-    name: 'ct-react-rules',
+    name: "ct-react-rules",
     rules: {
       // https://github.com/yannickcr/eslint-plugin-react/tree/master/docs/rules
       "react/forbid-foreign-prop-types": ["warn", { allowInPropTypes: true }],
@@ -46,7 +46,6 @@ export default [
       "react/style-prop-object": "warn",
 
       // https://github.com/evcohen/eslint-plugin-jsx-a11y/tree/master/docs/rules
-      "jsx-a11y/accessible-emoji": "warn",
       "jsx-a11y/alt-text": "warn",
       "jsx-a11y/anchor-has-content": "warn",
       "jsx-a11y/anchor-is-valid": [
@@ -69,8 +68,6 @@ export default [
       "jsx-a11y/role-has-required-aria-props": "warn",
       "jsx-a11y/role-supports-aria-props": "warn",
       "jsx-a11y/scope": "warn",
-      // Enforce double quotes for JSX attributes
-      "jsx-quotes": ["warn", "prefer-double"],
       // Only allow curly braces for prop values when they are needed - E.g. `<div className={'p-4'} />` should be `<div className="p-4" />`
       // "react/jsx-curly-brace-presence": [
       //   "warn",

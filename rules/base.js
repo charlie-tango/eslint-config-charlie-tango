@@ -4,7 +4,7 @@ import eslint from "@eslint/js";
 export default [
   eslint.configs.recommended,
   {
-    name: 'ct-base-rules',
+    name: "ct-base-rules",
     rules: {
       // http://eslint.org/docs/rules/
       "array-callback-return": "warn",
@@ -53,7 +53,6 @@ export default [
       "no-negated-in-lhs": "warn",
       "no-new-func": "warn",
       "no-new-object": "warn",
-      "no-new-symbol": "warn",
       "no-new-wrappers": "warn",
       "no-obj-calls": "warn",
       "no-octal": "warn",
@@ -101,11 +100,6 @@ export default [
       "use-isnan": "warn",
       "valid-typeof": "warn",
       "getter-return": "warn",
-
-      // https://github.com/benmosher/eslint-plugin-import/tree/master/docs/rules
-      "import/first": "error",
-      "import/no-amd": "error",
-      "import/no-webpack-loader-syntax": "error",
     },
   },
 ];

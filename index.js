@@ -1,6 +1,5 @@
-import tseslint from "typescript-eslint";
-import baseRules from "./rules/typescript.js";
+import baseRules from "./rules/base.js";
 import tsRules from "./rules/typescript.js";
 import reactRules from "./rules/react.js";
 
-export default tseslint.config(...baseRules, ...tsRules, ...reactRules);
+export default [...baseRules, ...tsRules, ...reactRules];
