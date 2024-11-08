@@ -7,6 +7,7 @@ export default [
     rules: {
       // TypeScript's `noFallthroughCasesInSwitch` option is more robust (#6906)
       "default-case": "off",
+      "@typescript-eslint/no-empty-object-type": "off",
       "@typescript-eslint/no-unused-expressions": "off",
 
       // Add TypeScript specific rules (and turn off ESLint equivalents)

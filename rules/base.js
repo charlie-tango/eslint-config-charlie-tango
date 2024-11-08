@@ -36,6 +36,7 @@ export default [
       "no-labels": ["warn", { allowLoop: true, allowSwitch: false }],
       "no-lone-blocks": "warn",
       "no-loop-func": "warn",
+      "no-loss-of-precision": "off",
       "no-mixed-operators": [
         "warn",
         {
