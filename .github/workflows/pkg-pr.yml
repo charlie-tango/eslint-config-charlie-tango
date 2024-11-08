@@ -15,4 +15,4 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Publish preview package
-        run: pnpx pkg-pr-new publish --no-template --compact
+        run: pnpx pkg-pr-new publish --no-template
